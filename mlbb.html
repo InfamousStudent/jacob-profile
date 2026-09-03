@@ -8,6 +8,61 @@
     <title>Mobile Legends — JACOB / PROFILE</title>
 
     <link rel="stylesheet" href="style.css">
+
+    <style>
+
+        /* MY EXPERIENCE EXPANDABLE CARD */
+
+        .experience-card {
+            cursor: pointer;
+        }
+
+        .experience-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 25px;
+        }
+
+        .experience-arrow {
+            font-size: 28px;
+            color: #596273;
+            transition: transform .35s ease, color .35s ease;
+        }
+
+        .experience-card:hover .experience-arrow {
+            color: white;
+        }
+
+        .experience-content {
+            max-height: 0;
+            overflow: hidden;
+            opacity: 0;
+            transition:
+                max-height .7s cubic-bezier(.2,.8,.2,1),
+                opacity .35s ease,
+                margin-top .4s ease;
+        }
+
+        .experience-content p {
+            color: var(--muted);
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+        .experience-card.open .experience-content {
+            max-height: 2000px;
+            opacity: 1;
+            margin-top: 30px;
+        }
+
+        .experience-card.open .experience-arrow {
+            transform: rotate(180deg);
+            color: white;
+        }
+
+    </style>
+
 </head>
 
 <body>
@@ -51,9 +106,12 @@
     </div>
 
 
-    <!-- HISTORY -->
+    <!-- INFORMATION -->
 
     <div class="info-grid">
+
+
+        <!-- MY HISTORY -->
 
         <div class="info">
 
@@ -129,7 +187,7 @@
         </div>
 
 
-        <!-- ACHIEVEMENTS -->
+        <!-- CAREER ACHIEVEMENTS -->
 
         <div class="info">
 
@@ -138,11 +196,16 @@
             </h2>
 
             <p>
-                Achievement Level: 99<br>
-                Achievement Points: 620 / 1000<br>
-                Overall Ranking: Top 0.125%<br>
-                Battle Achievements: 148 / 291 — Top 0.88%<br>
-                Collection Achievements: 49 / 88 — Top 5.57%<br>
+                Achievement Level: 99
+                <br>
+                Achievement Points: 620 / 1000
+                <br>
+                Overall Ranking: Top 0.125%
+                <br>
+                Battle Achievements: 148 / 291 — Top 0.88%
+                <br>
+                Collection Achievements: 49 / 88 — Top 5.57%
+                <br>
                 Esports Achievements: 6 / 22 — Top 1.54%
             </p>
 
@@ -170,7 +233,7 @@
         </div>
 
 
-        <!-- GOOGLE PLAY -->
+        <!-- GOOGLE PLAY ACHIEVEMENTS -->
 
         <div class="info full">
 
@@ -255,20 +318,34 @@
 
             <p>
 
-                Return of the King V<br>
-                Bring the Pain V<br>
-                MVP V<br>
-                Emblem Power V<br>
-                Restless V<br>
-                Man of Steel V<br>
-                Epic Comeback V<br>
-                Best Overall V<br>
-                Legend of War V<br>
-                Killing Machine V<br>
-                Heavyweight Collector<br>
-                Emote Collector V<br>
-                Rising Star V<br>
-                King Midas V<br>
+                Return of the King V
+                <br>
+                Bring the Pain V
+                <br>
+                MVP V
+                <br>
+                Emblem Power V
+                <br>
+                Restless V
+                <br>
+                Man of Steel V
+                <br>
+                Epic Comeback V
+                <br>
+                Best Overall V
+                <br>
+                Legend of War V
+                <br>
+                Killing Machine V
+                <br>
+                Heavyweight Collector
+                <br>
+                Emote Collector V
+                <br>
+                Rising Star V
+                <br>
+                King Midas V
+                <br>
                 Regal Style V
 
             </p>
@@ -276,32 +353,112 @@
         </div>
 
 
-        <!-- PERSONAL EXPERIENCE -->
+        <!-- MY EXPERIENCE -->
 
-        <div class="info full">
+        <div
+            class="info full experience-card"
+            onclick="toggleExperience(this)"
+        >
 
-            <h2>
-                📖 My Experience
-            </h2>
+            <div class="experience-header">
 
-            <p>
-                MLBB has been around in my life for years now,
-                and starting in 2021 means i've seen a lot of
-                changes throughout the years. for me, those years
-                really felt like the golden era of mlbb. it wasn't
-                just about the game itself, but also the people,
-                the matches, the memories and everything that
-                came with playing it. even though the game has
-                changed a lot since then, those years are still
-                the time i remember the most.
-            </p>
+                <div>
+
+                    <h2>
+                        📖 My Experience
+                    </h2>
+
+                    <p class="experience-preview">
+
+                        My history with MLBB since 2021,
+                        the golden era, the people,
+                        the matches, and the memories.
+
+                    </p>
+
+                </div>
+
+                <span class="experience-arrow">
+                    ↓
+                </span>
+
+            </div>
+
+
+            <!-- EXPANDED CONTENT -->
+
+            <div class="experience-content">
+
+                <p>
+                    i started playing mlbb back in 2021,
+                    and honestly throughout those years i
+                    think that was the golden era of mlbb for me.
+                    Everything just felt different back then.
+                    The game, the people, the matches, even the
+                    way playing the game felt. It was one of
+                    those periods where you could make memories
+                    without even realizing that you were making them.
+                </p>
+
+                <p>
+                    Over the years, i've played through different
+                    stages of the game and watched it change a lot.
+                    Some things got better, some things changed
+                    completely, and some things just arent the same
+                    anymore. But even with all of that, the older
+                    years still stand out to me the most.
+                </p>
+
+                <p>
+                    A big part of why i remember mlbb so much is
+                    because it wasnt only about winning matches.
+                    It was also about the random games, the moments
+                    that made me laugh, the frustrating matches,
+                    the times i actually played really well, and
+                    all the little things that happened while playing.
+                </p>
+
+                <p>
+                    My favorite hero is Argus, followed by Terizla,
+                    Granger, Clint, and Kagura. I usually play in a
+                    passive-aggressive way. I dont always rush into
+                    a fight immediately. I prefer watching what the
+                    enemy is doing and waiting for an opening, but
+                    once i see one, i can become much more aggressive.
+                </p>
+
+                <p>
+                    My favorite skin is the Darth Vader collaboration
+                    skin, mostly because of its effects. The effects
+                    are probably the biggest reason the skin stands
+                    out to me, and they make using it feel much more
+                    satisfying.
+                </p>
+
+                <p>
+                    According to my Google Play stats, i've spent
+                    302.8 hours playing Mobile Legends. I also
+                    reached Achievement Level 99 with 620 out of
+                    1000 achievement points, placing me in the
+                    top 0.125% overall.
+                </p>
+
+                <p>
+                    Looking back, i dont really think of mlbb as
+                    just another game i've played. It's something
+                    that has been around for years of my life,
+                    and because of that, there's a lot more
+                    attached to it than just the game itself.
+                </p>
+
+            </div>
 
         </div>
 
     </div>
 
 
-    <!-- QUOTE -->
+    <!-- GOLDEN ERA -->
 
     <div class="quote">
 
@@ -317,6 +474,8 @@
     </div>
 
 
+    <!-- FOOTER -->
+
     <div class="footer">
 
         JACOB / PROFILE · MOBILE LEGENDS
@@ -324,6 +483,19 @@
     </div>
 
 </div>
+
+
+<!-- JAVASCRIPT -->
+
+<script>
+
+function toggleExperience(card) {
+
+    card.classList.toggle("open");
+
+}
+
+</script>
 
 </body>
 
